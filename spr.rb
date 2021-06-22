@@ -5,25 +5,25 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ejoffe/spr/releases/download/v0.5.0/spr_macos_x86_64.tar.gz"
-    sha256 "8663ec54e7d13ba2398faf8a3b41755487f13cffd43f3228aa491e9d2cd08001"
+    url "https://github.com/ejoffe/spr/releases/download/v0.6.0/spr_macos_x86_64.tar.gz"
+    sha256 "699d8a1a3cdb7d956ef8f95d47d6adfb625ed8e407df31e245862fbc3ea6d1ff"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ejoffe/spr/releases/download/v0.5.0/spr_macos_arm64.tar.gz"
-    sha256 "81658f2e58d5475940c3f1d2a6942863cf039ecba7b33ff822414c7cf451fe43"
+    url "https://github.com/ejoffe/spr/releases/download/v0.6.0/spr_macos_arm64.tar.gz"
+    sha256 "f2f1a65726dd03b4f3a827ec06fdc4fd39df667cd9e9b5609fccdc6c7379c3f4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ejoffe/spr/releases/download/v0.5.0/spr_linux_x86_64.tar.gz"
-    sha256 "e5e983450e55d2b3e585873ce2d3b9616f234bfefe953189ba2b2a34482e9da5"
+    url "https://github.com/ejoffe/spr/releases/download/v0.6.0/spr_linux_x86_64.tar.gz"
+    sha256 "450e42a167f61c78071f62cf2315e06619125f93b6915d6a8eddbeb8d09fbbcd"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ejoffe/spr/releases/download/v0.5.0/spr_linux_arm64.tar.gz"
-    sha256 "7a65dc6dd1b9f8b3d0ca5c13e5b69944d8996284af4e1990e07e5f54dd7aa424"
+    url "https://github.com/ejoffe/spr/releases/download/v0.6.0/spr_linux_arm64.tar.gz"
+    sha256 "844cf9ba5a9a0ef2d0c6d5481fb2aeee9070b1e93f2c487a1419593095bda607"
   end
 
   def install
