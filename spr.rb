@@ -11,19 +11,19 @@ class Spr < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/ejoffe/spr/releases/download/v0.7.0/spr_macos_x86_64.tar.gz"
-    sha256 "ad3839c11460ea5b543c3aafa99c36a8aa7f792520c316fb20b7c72d08e9d30f"
+    sha256 "4d01f9738478e2c2fe993f4515488234b32a076f9f9a73ee49b4f4a590094446"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/ejoffe/spr/releases/download/v0.7.0/spr_macos_arm64.tar.gz"
-    sha256 "53ed7ca7dc5bffa62be5883a1e46ad55869d52b4a313b474c9022b2a16012424"
+    sha256 "6305b962a7beeaa2dd7b1cf15ea652a91b71177db1a1e3680553bea2f770e4d1"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/ejoffe/spr/releases/download/v0.7.0/spr_linux_x86_64.tar.gz"
-    sha256 "1944f0f566657446b782c0e792695cff01772d141a22533d0c04a5ecfecd0228"
+    sha256 "981d7aa0d8e2d2f6559539772a64267bbb7ca9ee530fe6f69494b30535b29718"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/ejoffe/spr/releases/download/v0.7.0/spr_linux_arm64.tar.gz"
-    sha256 "f66a1cf9c6c64eb33a2316e738dda81b176650304e01537fc81b7845bb8f9026"
+    sha256 "2183ff9d5fb99be94aa713a1c54109ac2a4dd4bced6e6cbdb31ced240dded74c"
   end
 
   def install
