@@ -5,36 +5,56 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.7.12"
+  version "0.7.14"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.7.12/spr_macos_x86_64.tar.gz"
-      sha256 "bc49f38099dd5fa27fd24fd2adb961bb26746c113b8ac4608a4fb88215cbe279"
+      url "https://github.com/ejoffe/spr/releases/download/v0.7.14/spr_macos_x86_64.tar.gz"
+      sha256 "1a4b6d19ad791d22447b1070f50c7e44e795f67277368ba552a01cd197ec2585"
+
+      def install
+        bin.install "git-spr"
+        bin.install "git-amend"
+        bin.install "spr_commit_hook"
+        bin.install "spr_reword_helper"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.7.12/spr_macos_arm64.tar.gz"
-      sha256 "7cb9ca46df39f24fbf86fe03eafc0f7017d8883b2f13de703090e8152e934bdb"
+      url "https://github.com/ejoffe/spr/releases/download/v0.7.14/spr_macos_arm64.tar.gz"
+      sha256 "4a59cb64416206964b56194c2a6d666503ba886138e40b5bf3552eade343264a"
+
+      def install
+        bin.install "git-spr"
+        bin.install "git-amend"
+        bin.install "spr_commit_hook"
+        bin.install "spr_reword_helper"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.7.12/spr_linux_x86_64.tar.gz"
-      sha256 "94de34c5a504a3b645366c3a4440ea741ca789fa22c83271710b96faec5dcb30"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.7.12/spr_linux_arm64.tar.gz"
-      sha256 "bec055834e24d3ab8d3b3427472ec9f2899618a9b8239aa39a75985b6f47591c"
-    end
-  end
+      url "https://github.com/ejoffe/spr/releases/download/v0.7.14/spr_linux_arm64.tar.gz"
+      sha256 "7fdb7599a4eeaa3ee75899f1f52e52ee6c83b694e555aae9f5a2475bf93db8a2"
 
-  def install
-    bin.install "git-spr"
-    bin.install "git-amend"
-    bin.install "spr_commit_hook"
-    bin.install "spr_reword_helper"
+      def install
+        bin.install "git-spr"
+        bin.install "git-amend"
+        bin.install "spr_commit_hook"
+        bin.install "spr_reword_helper"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ejoffe/spr/releases/download/v0.7.14/spr_linux_x86_64.tar.gz"
+      sha256 "c4ab9ce4f120d3022c1848e3cf07fad6affb2f2978c2619442df9f3e4ce7e317"
+
+      def install
+        bin.install "git-spr"
+        bin.install "git-amend"
+        bin.install "spr_commit_hook"
+        bin.install "spr_reword_helper"
+      end
+    end
   end
 end
