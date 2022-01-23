@@ -5,13 +5,13 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.0/spr_macos_arm64.tar.gz"
-      sha256 "db3e038f82be64fb0cf7be65d828303bd8a3c48603521069b13c5e67a3fab82a"
+    if Hardware::CPU.intel?
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.1/spr_macos_x86_64.tar.gz"
+      sha256 "08336e56a4411bdde146c9b951a7c1507d64919d2334c8ec5751af01e12bcd10"
 
       def install
         bin.install "git-spr"
@@ -20,9 +20,9 @@ class Spr < Formula
         bin.install "spr_reword_helper"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.0/spr_macos_x86_64.tar.gz"
-      sha256 "72e58531d940ba83e8fb92b4fab02a582787b609bd86dd0fecf99736dff5cd7e"
+    if Hardware::CPU.arm?
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.1/spr_macos_arm64.tar.gz"
+      sha256 "ddf43b24352ac555631fdfd74659df21bda4bd833b46cf49cc62633fce6da267"
 
       def install
         bin.install "git-spr"
@@ -34,9 +34,9 @@ class Spr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.0/spr_linux_x86_64.tar.gz"
-      sha256 "7fad5efa0e1dcddae6610f1829a9c664b1f0f04d20188dccded99ace18e33aa5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.1/spr_linux_arm64.tar.gz"
+      sha256 "3e0f0de3dda334b52e39a41f5de2bd7909cc355ed8835ef38047daff68ffb339"
 
       def install
         bin.install "git-spr"
@@ -45,9 +45,9 @@ class Spr < Formula
         bin.install "spr_reword_helper"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.0/spr_linux_arm64.tar.gz"
-      sha256 "70a0e4f201119a7c2484e664ee20d32854c0d9e7381facbe3c990f4fd01544f3"
+    if Hardware::CPU.intel?
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.1/spr_linux_x86_64.tar.gz"
+      sha256 "b3c15a03192340feacf3e44d5ceaad4cb8c0bc3cef86112efeb9d0c7faeeb591"
 
       def install
         bin.install "git-spr"
