@@ -5,13 +5,13 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.8.2"
+  version "0.8.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.2/spr_macos_x86_64.tar.gz"
-      sha256 "876b979d015928b1e1967f3dee85d78570cfd779ba36587b750c293bd580c30f"
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.3/spr_macos_x86_64.tar.gz"
+      sha256 "2c46699b5016ba606b610853102d5f7b5775963afdc3584c592821fd611abaea"
 
       def install
         bin.install "git-spr"
@@ -21,8 +21,8 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.2/spr_macos_arm64.tar.gz"
-      sha256 "ee133819ddad43e605d16a5aae9518f0b7ed5fcfeaa728bec21d0cfd0d816c54"
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.3/spr_macos_arm64.tar.gz"
+      sha256 "cbdb13ae1914f49400675a36465fb03964ad93c41cc0023dc68c3d29a0813ece"
 
       def install
         bin.install "git-spr"
@@ -35,8 +35,8 @@ class Spr < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.2/spr_linux_x86_64.tar.gz"
-      sha256 "88715697c0d7e1fbbf63a15fa7cecda0753da291f75e80e24e07d928c1f255e6"
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.3/spr_linux_x86_64.tar.gz"
+      sha256 "7e364d58c683c1f2aad438a0c3d780fd9ef6affc709c811dab09a12a55649f97"
 
       def install
         bin.install "git-spr"
@@ -46,8 +46,8 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.8.2/spr_linux_arm64.tar.gz"
-      sha256 "69d50e8f6c17f782d2c6bd3093f7fabe706f98bc8b6f7207d0251bb5a5ea7c22"
+      url "https://github.com/ejoffe/spr/releases/download/v0.8.3/spr_linux_arm64.tar.gz"
+      sha256 "519da093b47cc2c3effc41de7c6ec4e6a35fb70ebbda5adcebe7bb20b9973e76"
 
       def install
         bin.install "git-spr"
