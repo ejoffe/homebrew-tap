@@ -5,13 +5,13 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.9.2"
+  version "0.9.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.9.2/spr_macos_x86_64.tar.gz"
-      sha256 "be4e450e51b11dec1d2c66b6d409830ce2757f341c0db328eb5aa94b33c57705"
+    if Hardware::CPU.arm?
+      url "https://github.com/ejoffe/spr/releases/download/v0.9.3/spr_macos_arm64.tar.gz"
+      sha256 "c4b9287515ab4fb34ba76f19b138f989182ad0f0dee1205839f63c10d0ca0505"
 
       def install
         bin.install "git-spr"
@@ -19,9 +19,9 @@ class Spr < Formula
         bin.install "spr_reword_helper"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.9.2/spr_macos_arm64.tar.gz"
-      sha256 "a53f3dd3382ce44578f32d1620a6a1d7b1f52b8b966f079e39c3e6279683bb82"
+    if Hardware::CPU.intel?
+      url "https://github.com/ejoffe/spr/releases/download/v0.9.3/spr_macos_x86_64.tar.gz"
+      sha256 "8b9333da6da1b12d370cf7cebc6a608bbde47cce5734b667bfe3dda84666f2c7"
 
       def install
         bin.install "git-spr"
@@ -33,8 +33,8 @@ class Spr < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.9.2/spr_linux_arm64.tar.gz"
-      sha256 "e4e8289d6dbf24b5392cb1e128366896181b8957c19ef404ce312b22e353dc4f"
+      url "https://github.com/ejoffe/spr/releases/download/v0.9.3/spr_linux_arm64.tar.gz"
+      sha256 "f6bbdb64a5fa81bb2cf9f7ff2a3f5f9d0a5f34f140c596283e0e17019bc2f1c7"
 
       def install
         bin.install "git-spr"
@@ -43,8 +43,8 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.9.2/spr_linux_x86_64.tar.gz"
-      sha256 "889d68ee05a6b336407450b31637e3a8b52c2b589ed8cea445a54e46f1a9c86d"
+      url "https://github.com/ejoffe/spr/releases/download/v0.9.3/spr_linux_x86_64.tar.gz"
+      sha256 "0b4b2337f2390ece69112bf3c0f6ff1a227910a0cd5931ccbeb7dc2f6239f434"
 
       def install
         bin.install "git-spr"
