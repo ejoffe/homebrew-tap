@@ -10,7 +10,7 @@ class Spr < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_darwin_x86_64 .tar.gz"
+      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_darwin_x86_64.tar.gz"
       sha256 "be2c09fcc1e66dc64e83aa0180e6cd1cc56f8511170677e57798bce0a31858cd"
 
       def install
@@ -20,7 +20,7 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_darwin_arm64 .tar.gz"
+      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_darwin_arm64.tar.gz"
       sha256 "6fbd4f90f1d12f3f55aa55eec3656906a33cc396b928a31a382bd887d1b32dfe"
 
       def install
@@ -33,7 +33,7 @@ class Spr < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_linux_x86_64 .tar.gz"
+      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_linux_x86_64.tar.gz"
       sha256 "a522bfe9d6f186150d883fd8d196e061a9aef205ef2564ffa3456548c8224846"
 
       def install
@@ -43,7 +43,7 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_linux_arm64 .tar.gz"
+      url "https://github.com/ejoffe/spr/releases/download/v0.13.1/spr_linux_arm64.tar.gz"
       sha256 "dd2429f766ee276a5d7c0e4fd80fc694518c51db018b7188f2691f85022ded74"
 
       def install
