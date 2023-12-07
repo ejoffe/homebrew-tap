@@ -5,13 +5,13 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.14.4"
+  version "0.14.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.14.4/spr_darwin_arm64.tar.gz"
-      sha256 "b37dd2d18f18c447c0b143dc15da0be41c34f863015f4d70bfce0568411d0879"
+      url "https://github.com/ejoffe/spr/releases/download/v0.14.5/spr_darwin_arm64.tar.gz"
+      sha256 "d777d5923e59bebfc4ef64683751db8d9b235e91b0a8387c111b891050869a95"
 
       def install
         bin.install "git-spr"
@@ -20,8 +20,8 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.14.4/spr_darwin_x86_64.tar.gz"
-      sha256 "3167e997875dea2992a36db421f180a0d5aa1232e2e36a9b007b600289b2d74d"
+      url "https://github.com/ejoffe/spr/releases/download/v0.14.5/spr_darwin_x86_64.tar.gz"
+      sha256 "f39baa7dc988122b0bdaca2ace1856f41c47cbcaa9c896221feac03f76f2ee45"
 
       def install
         bin.install "git-spr"
@@ -32,9 +32,9 @@ class Spr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.14.4/spr_linux_x86_64.tar.gz"
-      sha256 "6c3957633b993bfb47d8e4916dd5e5a3315e6352858c2ca1fe853e696e6077eb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ejoffe/spr/releases/download/v0.14.5/spr_linux_arm64.tar.gz"
+      sha256 "f37b8b432bd72deae4f1a6de494558c1d7825ce6ee6f3e799554c46b84cacbf0"
 
       def install
         bin.install "git-spr"
@@ -42,9 +42,9 @@ class Spr < Formula
         bin.install "spr_reword_helper"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.14.4/spr_linux_arm64.tar.gz"
-      sha256 "5fefcfe5db0f9af646ef4af4e473e4785bb6043fb0bd07c4289c399a5c9afb77"
+    if Hardware::CPU.intel?
+      url "https://github.com/ejoffe/spr/releases/download/v0.14.5/spr_linux_x86_64.tar.gz"
+      sha256 "cc7f34a44026012d796c8b91a188cea1013c0a922245ac622f6ca795c6828846"
 
       def install
         bin.install "git-spr"
