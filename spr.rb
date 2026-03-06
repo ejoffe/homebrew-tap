@@ -5,25 +5,25 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.16.0"
+  version "0.16.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.16.0/spr_darwin_x86_64.tar.gz"
-      sha256 "dad8f22efdadc4d3fded14df800cd8ddcb592a2922b047456be6c4ddbf9ea6ac"
+      url "https://github.com/ejoffe/spr/releases/download/v0.16.1/spr_darwin_x86_64.tar.gz"
+      sha256 "ef2aeb8d3b342af86adbe1f85bfc3174a226b131280f26c295ddd320c350acc4"
 
-      def install
+      define_method(:install) do
         bin.install "git-spr"
         bin.install "git-amend"
         bin.install "spr_reword_helper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.16.0/spr_darwin_arm64.tar.gz"
-      sha256 "96a2547b89ed12cc8ebcb4d899fe79434f17556ebcf569378246a89ee3aad3b8"
+      url "https://github.com/ejoffe/spr/releases/download/v0.16.1/spr_darwin_arm64.tar.gz"
+      sha256 "d8e5be2a3855ddfe904708aea42c4af166d4d1cf61e3356f80c53cfb36d44d81"
 
-      def install
+      define_method(:install) do
         bin.install "git-spr"
         bin.install "git-amend"
         bin.install "spr_reword_helper"
@@ -33,18 +33,18 @@ class Spr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.16.0/spr_linux_x86_64.tar.gz"
-      sha256 "383f66f0f719506f2afa36174bdba740351ed2202c34075510398de1e4aa37be"
-      def install
+      url "https://github.com/ejoffe/spr/releases/download/v0.16.1/spr_linux_x86_64.tar.gz"
+      sha256 "d7c364ab3b90e82eef6db8428709112a2ce3b9ca599e74284f04812163638a57"
+      define_method(:install) do
         bin.install "git-spr"
         bin.install "git-amend"
         bin.install "spr_reword_helper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.16.0/spr_linux_arm64.tar.gz"
-      sha256 "1174d703ed57e7b47e6e12cae853fee53ad2be14642e9ba789fda4f1c4c3c9a5"
-      def install
+      url "https://github.com/ejoffe/spr/releases/download/v0.16.1/spr_linux_arm64.tar.gz"
+      sha256 "be5b15e7a1e9dd7c844365e4f39592b787e527f288848f8676b765efbff9b720"
+      define_method(:install) do
         bin.install "git-spr"
         bin.install "git-amend"
         bin.install "spr_reword_helper"
