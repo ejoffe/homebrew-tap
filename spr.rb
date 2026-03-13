@@ -5,13 +5,13 @@
 class Spr < Formula
   desc "Stacked Pull Requests on GitHub"
   homepage "https://github.com/ejoffe/spr"
-  version "0.17.0"
+  version "0.17.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ejoffe/spr/releases/download/v0.17.0/spr_darwin_x86_64.tar.gz"
-      sha256 "d6712cde57b919d9a46aed64656d466c2481b71ca38a454cc82c5ddac7573fac"
+      url "https://github.com/ejoffe/spr/releases/download/v0.17.1/spr_darwin_x86_64.tar.gz"
+      sha256 "4842a2a9731978c3d90134f0b1869159dde391dcb4f8ca63cbf9892fa516d520"
 
       define_method(:install) do
         bin.install "git-spr"
@@ -20,8 +20,8 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ejoffe/spr/releases/download/v0.17.0/spr_darwin_arm64.tar.gz"
-      sha256 "351e7f66702dee0d93d4b059950dc65ba552f234e9313b25d8b662ce3e3191ed"
+      url "https://github.com/ejoffe/spr/releases/download/v0.17.1/spr_darwin_arm64.tar.gz"
+      sha256 "f01c439e0adc31864cadfe6918a4c0e570c1aa46366781b73c1178667d032a84"
 
       define_method(:install) do
         bin.install "git-spr"
@@ -33,8 +33,8 @@ class Spr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.17.0/spr_linux_x86_64.tar.gz"
-      sha256 "43bd5ce3173d6f72884283c35e6e15a196323a549b402a9f522a2d7973de01b9"
+      url "https://github.com/ejoffe/spr/releases/download/v0.17.1/spr_linux_x86_64.tar.gz"
+      sha256 "33e0c04e39b89380ee84d36924594761137a65dd4e150f6136a943c7da24058e"
       define_method(:install) do
         bin.install "git-spr"
         bin.install "git-amend"
@@ -42,8 +42,8 @@ class Spr < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ejoffe/spr/releases/download/v0.17.0/spr_linux_arm64.tar.gz"
-      sha256 "1fbab8f52688f3e31d412e90c0f600e264b95334424e5f7eef6cea7fcfe59fb9"
+      url "https://github.com/ejoffe/spr/releases/download/v0.17.1/spr_linux_arm64.tar.gz"
+      sha256 "714b5e995ca6f4d9ef5a2f94a66bdf1234ef52da4c04b3872adc327d3708c474"
       define_method(:install) do
         bin.install "git-spr"
         bin.install "git-amend"
